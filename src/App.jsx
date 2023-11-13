@@ -1,7 +1,9 @@
+import { PopularAnimePage, LoginPage } from './data/index';
 function App() {
   return (
     <>
-      <div>hello</div>
+      <PopularAnimePage />
+      <LoginPage />
     </>
   );
 }
