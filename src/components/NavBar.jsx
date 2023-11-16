@@ -1,3 +1,4 @@
+import './styles/navbar.css';
 const NavBar = () => {
   return (
     <div className="header">

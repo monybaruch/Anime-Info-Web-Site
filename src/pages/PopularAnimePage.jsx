@@ -1,7 +1,7 @@
-import { useGlobalContext } from '../context/Global';
+import { useGlobalContext } from '../hooks/useGlobalContext';
 import { Link } from 'react-router-dom';
-import { NavBar } from '../data';
-import Footer from '../components/Footer';
+import { NavBar, Footer } from '../data';
+import './popular.css';
 
 const PopularAnimePage = () => {
   const { popularAnime, isSearch } = useGlobalContext();

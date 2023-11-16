@@ -1,0 +1,4 @@
+export const ACTIONS = {
+  LOADING: 'LOADING',
+  GET_POPULAR_ANIME: 'GET_POPULAR_ANIME',
+};

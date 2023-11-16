@@ -1,3 +1,5 @@
 import NavBar from '../components/NavBar';
 import PopularAnimePage from '../pages/PopularAnimePage';
-export { PopularAnimePage, NavBar };
+import Footer from '../components/Footer';
+import AnimeInfo from './../components/AnimeInfo';
+export { PopularAnimePage, NavBar, Footer, AnimeInfo };
