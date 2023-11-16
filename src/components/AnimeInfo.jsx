@@ -1,15 +1,35 @@
-import { useState } from 'react';
+import { AnimeInfoHeader, AnimeDetails } from '../data';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './styles/animeinfo.css';
 
 const AnimeInfo = () => {
   const { id } = useParams();
-  console.log(id);
+  const [anime, setAnime] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  // const [anime, setAnime] = useState();
-  // const [moreInfo, setMoreInfo] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`https://api.jikan.moe/v4/anime/${id}`);
+        const data = await response.json();
+        setAnime(data.data);
+      } catch (error) {
+        console.error('Error fetching anime data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  // fetch anime by it's id
+    fetchData();
+  }, [id]);
 
-  return <div>AnimeItem</div>;
+  return (
+    <>
+      <AnimeInfoHeader {...anime} />
+      {loading ? <p>Loading...</p> : <AnimeDetails {...anime} />}
+    </>
+  );
 };
+
 export default AnimeInfo;

@@ -1,5 +1,8 @@
-import NavBar from '../components/NavBar';
+import AnimeInfoHeader from '../components/AnimeInfoHeader';
 import PopularAnimePage from '../pages/PopularAnimePage';
-import Footer from '../components/Footer';
+import AnimeDetails from '../components/AnimeDetails';
 import AnimeInfo from './../components/AnimeInfo';
-export { PopularAnimePage, NavBar, Footer, AnimeInfo };
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
+
+export { PopularAnimePage, NavBar, Footer, AnimeInfo, AnimeDetails, AnimeInfoHeader };
