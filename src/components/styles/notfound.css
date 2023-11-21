@@ -1,0 +1,10 @@
+.not-found {
+  background: url('../public/asset/f0yZgd2.png') no-repeat center center/cover;
+  height: 80vh;
+}
+
+.not-found h1 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 3rem;
+}

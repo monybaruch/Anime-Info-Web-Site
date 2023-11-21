@@ -23,3 +23,8 @@ html {
 body {
   background-color: #fcfaf5;
 }
+
+.container {
+  background-color: #03e6e6;
+  height: 80vh, fit-content;
+}
