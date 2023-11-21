@@ -4,7 +4,7 @@ const AnimeInfoDescription = ({ synopsis }) => {
   const [showMore, setShowMore] = useState(false);
   return (
     <p className="description">
-      {showMore ? synopsis : synopsis?.substring(0, 450) + '...'}
+      {showMore ? synopsis : synopsis?.substring(0, 200) + '...'}
       <button
         onClick={() => {
           setShowMore(!showMore);

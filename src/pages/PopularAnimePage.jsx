@@ -1,6 +1,5 @@
 import { useGlobalContext } from '../hooks/useGlobalContext';
 import { Link } from 'react-router-dom';
-import { NavBar, Footer } from '../data';
 import './popular.css';
 
 const PopularAnimePage = () => {
@@ -18,11 +17,9 @@ const PopularAnimePage = () => {
   };
   return (
     <div className="container">
-      <NavBar />
       <div className="popular-container">
         <div className="popular-anime">{conditionalRender()}</div>
       </div>
-      <Footer />
     </div>
   );
 };
