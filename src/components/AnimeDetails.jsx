@@ -1,3 +1,4 @@
+import './styles/animedetails.css';
 const AnimeDetails = ({ images, rating, rank, score, scored_by, popularity, status, source, season, duration }) => {
   return (
     <div className="details">

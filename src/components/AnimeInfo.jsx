@@ -22,12 +22,12 @@ const AnimeInfo = () => {
   }, [id]);
 
   return (
-    <>
+    <div className="container anime-info-flex">
       <AnimeInfoHeader {...anime} />
       <AnimeDetails {...anime} />
       <AnimeInfoDescription {...anime} />
       <AnimeInfoTrailer {...anime} />
-    </>
+    </div>
   );
 };
 
