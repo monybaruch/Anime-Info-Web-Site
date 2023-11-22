@@ -1,22 +1,16 @@
 .detail {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10rem;
 }
 .anime-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
+.anime-details p {
+  font-size: 2rem;
+  font-weight: 600;
+}
 img {
   border-radius: 7px;
-  border: 8px solid whitesmoke;
-}
-p {
-  display: flex;
-  gap: 1rem;
-  font-weight: 600;
-  color: #454e56;
-  font-size: 2rem;
 }

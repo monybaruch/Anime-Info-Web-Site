@@ -1,6 +1,6 @@
 import { useGlobalContext } from '../hooks/useGlobalContext';
 import { Link } from 'react-router-dom';
-import './popular.css';
+import './PopularAnimePage.css';
 
 function PopularAnimePage() {
   const { popularAnime, isSearch, searchResults } = useGlobalContext();

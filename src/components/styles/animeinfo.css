@@ -1,0 +1,14 @@
+.anime-info-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem 18rem;
+}
+
+.details {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 5px solid #e5e7eb;
+}

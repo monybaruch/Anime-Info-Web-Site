@@ -1,0 +1,21 @@
+.description {
+  margin-top: 2rem;
+  color: #6c7983;
+  line-height: 1.7rem;
+}
+.description button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #27ae60;
+  font-weight: 600;
+}
+
+p {
+  font-weight: 600;
+  color: #454e56;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}

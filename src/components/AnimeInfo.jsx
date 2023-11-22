@@ -23,9 +23,11 @@ const AnimeInfo = () => {
 
   return (
     <div className="container anime-info-flex">
-      <AnimeInfoHeader {...anime} />
-      <AnimeDetails {...anime} />
-      <AnimeInfoDescription {...anime} />
+      <div className="details">
+        <AnimeInfoHeader {...anime} />
+        <AnimeDetails {...anime} />
+        <AnimeInfoDescription {...anime} />
+      </div>
       <AnimeInfoTrailer {...anime} />
     </div>
   );
