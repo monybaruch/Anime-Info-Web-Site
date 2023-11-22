@@ -8,11 +8,12 @@ const NavBar = () => {
       <div className="anime-search">
         <form action="" className="search-form" onSubmit={handleSubmit}>
           <div className="input-control">
-            <input type="text" placeholder="Search Anime" value={search} onChange={handleChange} />
-            <button type="submit">Search</button>
+            <input type="search" placeholder="Search your favorite anime!" value={search} onChange={handleChange} />
+            <button className="search-btn" type="submit">
+              Search
+            </button>
           </div>
         </form>
-        {/* <input type="search" placeholder="Search your favorite anime!" /> */}
       </div>
     </div>
   );
