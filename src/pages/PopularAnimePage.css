@@ -13,7 +13,7 @@
 .popular-anime a {
   height: 500px;
   border-radius: 7px;
-  border: 8px solid white;
+  border: 8px solid var(--primeryText);
 }
 .popular-anime a img {
   width: 100%;

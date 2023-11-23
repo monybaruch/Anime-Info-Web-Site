@@ -13,4 +13,35 @@
 }
 img {
   border-radius: 7px;
+  width: 400px;
+}
+
+@media screen and (max-width: 600px) {
+  .detail {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .anime-details p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+  img {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 601px) {
+  .detail {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 5px;
+  }
+  .anime-details p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  img {
+    height: 350px;
+    width: 350px;
+  }
 }

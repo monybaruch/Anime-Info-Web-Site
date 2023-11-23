@@ -9,7 +9,7 @@ const NavBar = () => {
         <form action="" className="search-form" onSubmit={handleSubmit}>
           <div className="input-control">
             <input type="search" placeholder="Search your favorite anime!" value={search} onChange={handleChange} />
-            <button className="search-btn" type="submit">
+            <button className="btn" type="submit">
               Search
             </button>
           </div>

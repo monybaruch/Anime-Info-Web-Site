@@ -1,0 +1,45 @@
+.form-container,
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-weight: 600;
+}
+.form-container {
+  padding: 5rem;
+  border-radius: 7px;
+  border: 8px solid white;
+  margin: 0.5rem;
+}
+label {
+  text-align: left;
+  padding: 0.25rem 0;
+  font-size: 1.7rem;
+}
+
+input {
+  font-size: 1.7rem;
+  margin: 0.7rem 0;
+  padding: 1rem;
+  border-radius: 7px;
+  border: none;
+  color: #03e6e6;
+}
+
+.link-btn {
+  margin: 2rem 0;
+  background: none;
+  text-decoration: underline;
+  border: none;
+  color: var(--primeryText);
+  font-size: 1.5rem;
+}
+
+::placeholder {
+  color: var(--primeryColor);
+}
+
+.form-container h2 {
+  font-size: 2.5rem;
+}

@@ -1,4 +1,4 @@
-import './styles/loginform.css';
+import './styles/form.css';
 import { useState } from 'react';
 const LoginForm = ({ onFormSwitch }) => {
   const [email, setEmail] = useState('');
@@ -10,28 +10,33 @@ const LoginForm = ({ onFormSwitch }) => {
   };
 
   return (
-    <div className="container">
+    <div className="flex-container">
       <div className="form-container">
-        <form onSubmit={handleSubmit} className="form">
-          <label htmlFor="email">email</label>
+        <h2>Login:</h2>
+        <form onSubmit={handleSubmit} className="login-form">
+          <label htmlFor="email">Email</label>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            placeholder="enter your email please!"
+            placeholder="enter email please!"
             name="email"
           />
-          <label htmlFor="password">password</label>
+          <label htmlFor="password">Password</label>
           <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
-            placeholder="enter your password please!"
+            placeholder="enter password please!"
             name="password"
           />
-          <button type="submit">Log In</button>
+          <button type="submit" className="btn">
+            Log In
+          </button>
         </form>
-        <button onClick={() => onFormSwitch('register')}>Don't have an account? Register here.</button>
+        <button onClick={() => onFormSwitch('register')} className="link-btn">
+          Don't have an account? Register here.
+        </button>
       </div>
     </div>
   );

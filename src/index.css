@@ -6,7 +6,8 @@
   font-family: 'Nunito', sans-serif;
 }
 :root {
-  --primeryText: #ffffff;
+  --primeryText: white;
+  --primeryColor: #03e6e6;
 }
 
 li {
@@ -20,12 +21,12 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  background-color: #fcfaf5;
+button {
+  cursor: pointer;
 }
 
 .container {
-  background-color: #03e6e6;
+  background-color: var(--primeryColor);
   height: 80vh, fit-content;
 }
 
@@ -34,5 +35,92 @@ iframe {
   border: 5px solid #e5e7eb;
   padding: 1.5rem;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: var(--primeryText);
+}
+
+.flex-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: var(--primeryColor);
+}
+
+.btn {
+  background-color: var(--primeryText);
+  border: 3px solid var(--primeryColor);
+  outline: none;
+  font-size: 1.5rem;
+  color: var(--primeryColor);
+  font-weight: 600;
+  border-radius: 7px;
+  padding: 0.7rem;
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+.btn:hover {
+  border: 3px solid var(--primeryText);
+  color: var(--primeryText);
+  background-color: var(--primeryColor);
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+  iframe {
+    width: 400px;
+    height: 400px;
+  }
+  .footer {
+    font-size: 0.7rem;
+  }
+  .header {
+    display: flex;
+    font-size: 1rem;
+    flex-direction: column;
+    height: 150px;
+    align-items: center;
+  }
+
+  .header .anime-search input {
+    width: 100px;
+    height: 30px;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+  }
+  .btn {
+    background-color: var(--primeryText);
+    border: 3px solid var(--primeryColor);
+    outline: none;
+    font-size: 1rem;
+    color: var(--primeryColor);
+    font-weight: 600;
+    border-radius: 7px;
+    padding: 0.4rem;
+    margin: none;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 601px) {
+  iframe {
+    width: 500px;
+    height: 500px;
+  }
+  .footer {
+    font-size: 0.9rem;
+  }
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  .header .anime-search input {
+    width: 200px;
+    height: 45px;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+  }
 }

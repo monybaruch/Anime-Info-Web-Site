@@ -1,6 +1,6 @@
 import { AnimeInfoHeader, AnimeDetails, AnimeInfoDescription, AnimeInfoTrailer } from '../data';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './styles/animeinfo.css';
 
 const AnimeInfo = () => {
@@ -24,6 +24,10 @@ const AnimeInfo = () => {
   return (
     <div className="container anime-info-flex">
       <div className="details">
+        <Link to={'/'} className="back-link">
+          Back to previous page !
+        </Link>
+        <br />
         <AnimeInfoHeader {...anime} />
         <AnimeDetails {...anime} />
         <AnimeInfoDescription {...anime} />

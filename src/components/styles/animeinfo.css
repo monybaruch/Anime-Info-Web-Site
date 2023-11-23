@@ -7,8 +7,19 @@
 }
 
 .details {
-  background-color: #fff;
+  background-color: var(--primeryText);
   border-radius: 20px;
   padding: 2rem;
   border: 5px solid #e5e7eb;
+}
+.back-link {
+  font-size: 2rem;
+  text-align: left;
+  text-decoration: underline;
+  color: #454e56;
+}
+.back-link:hover {
+  background-color: #454e56;
+  color: white;
+  transition: 0.5sec;
 }
