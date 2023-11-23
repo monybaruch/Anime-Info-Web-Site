@@ -5,11 +5,12 @@ import PopularAnimePage from '../pages/PopularAnimePage';
 import AnimeDetails from '../components/AnimeDetails';
 import SharedLayout from '../components/SharedLayout';
 import AnimeInfo from './../components/AnimeInfo';
-import RegisterPage from '../pages/RegisterPage';
+import RegisterForm from '../components/RegisterForm';
 import NotFound from '../components/NotFound';
-import LoginPage from '../pages/LoginPage';
+import LoginForm from '../components/Loginform';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import UserLogin from '../pages/UserLogin';
 
 export {
   PopularAnimePage,
@@ -22,6 +23,7 @@ export {
   AnimeInfoTrailer,
   SharedLayout,
   NotFound,
-  RegisterPage,
-  LoginPage,
+  RegisterForm,
+  LoginForm,
+  UserLogin,
 };

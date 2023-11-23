@@ -1,5 +1,5 @@
-import './registerpage.css';
-const RegisterPage = () => {
+import './styles/registerform.css';
+const RegisterForm = () => {
   return (
     <form action="/" className="form">
       <input type="text" placeholder="enter your username please!" className="username" name="username" />
@@ -8,4 +8,4 @@ const RegisterPage = () => {
     </form>
   );
 };
-export default RegisterPage;
+export default RegisterForm;

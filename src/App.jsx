@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { AnimeInfo, PopularAnimePage, SharedLayout, RegisterPage, LoginPage, NotFound } from './data';
+import { AnimeInfo, PopularAnimePage, SharedLayout, UserLogin, NotFound } from './data';
 const routes = [
   {
     path: '/',
@@ -7,8 +7,7 @@ const routes = [
     children: [
       { index: true, element: <PopularAnimePage /> },
       { path: '/anime/:id', element: <AnimeInfo /> },
-      { path: '/login', element: <LoginPage /> },
-      { path: '/register', element: <RegisterPage /> },
+      { path: '/login', element: <UserLogin /> },
       { path: '*', element: <NotFound /> },
     ],
   },
