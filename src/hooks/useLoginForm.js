@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
 import axios from 'axios';
@@ -6,6 +7,9 @@ export const useLoginForm = () => {
     email: '',
     password: '',
   });
+
+  const navigate = useNavigate();
+
   const fields = [
     {
       id: 1,
@@ -29,8 +33,22 @@ export const useLoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(loginData);
+    try {
+      const response = await axios.get('https://65647590ceac41c0761e3990.mockapi.io/users');
+      const user = response.data.find((user) => user.email === loginData.email && user.password === loginData.password);
+      if (user) {
+        localStorage.setItem('user', JSON.stringify(user));
+        console.log('You have loged in successfully!');
+        toast.success('You have loged in  successfully!');
+        navigate('/');
+      } else {
+        toast.error('Invalid email or password please try again!');
+      }
+    } catch (error) {
+      console.error('error was found', error);
+    }
   };
+
   const handleChange = (e) => {
     setResiterData({
       ...loginData,

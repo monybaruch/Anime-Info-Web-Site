@@ -9,6 +9,7 @@ export const useRegisterForm = () => {
     email: '',
     password: '',
   });
+
   const navigate = useNavigate();
 
   const fields = [
