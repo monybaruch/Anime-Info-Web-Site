@@ -1,6 +1,6 @@
-import './form.css';
-import { Input } from '../../data/index';
 import { useRegisterForm } from '../../hooks/useRegisterForm';
+import { Input } from '../../data/index';
+import './form.css';
 
 const RegisterForm = ({ onFormSwitch }) => {
   const { fields, handleChange, handleSubmit } = useRegisterForm();

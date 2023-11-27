@@ -2,7 +2,16 @@ const Input = ({ htmlFor, labelName, value, type, placeholder, name, handleChang
   return (
     <>
       <label htmlFor={htmlFor}>{labelName}</label>
-      <input value={value} onChange={handleChange} type={type} placeholder={placeholder} name={name} />
+      <input
+        value={value}
+        onChange={handleChange}
+        type={type}
+        placeholder={placeholder}
+        name={name}
+        required
+        minLength="4"
+        min="4"
+      />
     </>
   );
 };

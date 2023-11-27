@@ -1,4 +1,7 @@
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import axios from 'axios';
 
 export const useRegisterForm = () => {
   const [registerData, setResiterData] = useState({
@@ -6,6 +9,8 @@ export const useRegisterForm = () => {
     email: '',
     password: '',
   });
+  const navigate = useNavigate();
+
   const fields = [
     {
       id: 1,
@@ -36,10 +41,25 @@ export const useRegisterForm = () => {
     },
   ];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
     console.log(registerData);
+    e.preventDefault();
+    try {
+      const response = await axios.post('https://65647590ceac41c0761e3990.mockapi.io/users', registerData);
+      if (response.status === 201) {
+        console.log('You have registered successfully!');
+        toast.success('You have registered successfully!');
+        navigate('/');
+      } else {
+        console.log('You have failed to register');
+        toast.error('You have registered successfully!');
+      }
+    } catch (error) {
+      toast.error('An error ocurred: ' + error.message);
+      console.error('Error:', error);
+    }
   };
+
   const handleChange = (e) => {
     setResiterData({
       ...registerData,
