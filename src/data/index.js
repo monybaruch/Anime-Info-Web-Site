@@ -5,9 +5,10 @@ import PopularAnimePage from '../pages/PopularAnimePage';
 import AnimeDetails from '../components/AnimeDetails';
 import SharedLayout from '../components/SharedLayout';
 import AnimeInfo from './../components/AnimeInfo';
-import RegisterForm from '../components/RegisterForm';
+import RegisterForm from '../components/form/RegisterForm';
 import NotFound from '../components/NotFound';
-import LoginForm from '../components/Loginform';
+import LoginForm from '../components/form/LoginForm';
+import Input from '../components/form/input';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import UserLogin from '../pages/UserLogin';
@@ -26,4 +27,5 @@ export {
   RegisterForm,
   LoginForm,
   UserLogin,
+  Input,
 };

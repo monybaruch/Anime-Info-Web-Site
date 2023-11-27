@@ -1,4 +1,4 @@
-import './styles/form.css';
+import './form.css';
 import { useState } from 'react';
 const LoginForm = ({ onFormSwitch }) => {
   const [email, setEmail] = useState('');
