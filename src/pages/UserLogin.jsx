@@ -3,7 +3,7 @@ import { RegisterForm, LoginForm } from '../data';
 import { useAuthContext } from '../hooks/useAuthContext';
 const UserLogin = () => {
   const [currentForm, setCurrentForm] = useState('login');
-  const { user } = useAuthContext();
+  const { isRegistered } = useAuthContext();
 
   const toggleForm = (formName) => {
     setCurrentForm(formName);
@@ -11,7 +11,7 @@ const UserLogin = () => {
 
   return (
     <div>
-      {currentForm === 'login' || user ? (
+      {currentForm === 'login' || isRegistered ? (
         <LoginForm onFormSwitch={toggleForm} />
       ) : (
         <RegisterForm onFormSwitch={toggleForm} />

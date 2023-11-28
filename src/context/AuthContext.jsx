@@ -9,10 +9,13 @@ const userFromLocalStorage = localStorage.getItem('user') ? JSON.parse(localStor
 
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(userFromLocalStorage);
+  const [isRegistered, setIsRegistered] = useState(false);
+
   const [formData, setFormData] = useState({
     fullname: '',
     email: '',
     password: '',
+    favorites: [],
   });
 
   const navigate = useNavigate();
@@ -26,6 +29,7 @@ export const AuthContextProvider = ({ children }) => {
       );
       if (logedInUser) {
         localStorage.setItem('user', JSON.stringify(logedInUser));
+        console.log(logedInUser);
         setUser(logedInUser);
         console.log('You have loged in successfully!');
         toast.success('You have loged in  successfully!');
@@ -45,7 +49,7 @@ export const AuthContextProvider = ({ children }) => {
       if (response.status === 201) {
         console.log('You have registered successfully!');
         toast.success('You have registered successfully!');
-        navigate('/login');
+        setIsRegistered(true);
       } else {
         console.log('You have failed to register');
         toast.error('You have registered successfully!');
@@ -66,6 +70,11 @@ export const AuthContextProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem('user');
+  };
+
+  const saveUser = (updatedUser) => {
+    setUser(updatedUser);
+    localStorage.setItem('user', JSON.stringify(updatedUser));
   };
 
   const fields = [
@@ -106,7 +115,9 @@ export const AuthContextProvider = ({ children }) => {
         handleChange,
         handleLoginSubmit,
         handleRegisterSubmit,
+        saveUser,
         user,
+        isRegistered,
         logout,
       }}
     >
