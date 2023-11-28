@@ -1,19 +1,15 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { AnimeInfo, PopularAnimePage, SharedLayout, UserLogin, NotFound } from './data';
-const routes = [
-  {
-    path: '/',
-    element: <SharedLayout />,
-    children: [
-      { index: true, element: <PopularAnimePage /> },
-      { path: '/anime/:id', element: <AnimeInfo /> },
-      { path: '/login', element: <UserLogin /> },
-      { path: '*', element: <NotFound /> },
-    ],
-  },
-];
-const router = createBrowserRouter(routes);
+import { Routes, Route } from 'react-router-dom';
+import { SharedLayout, PopularAnimePage, AnimeInfo, UserLogin, NotFound } from './data';
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<PopularAnimePage />} />
+        <Route path="anime/:id" element={<AnimeInfo />} />
+        <Route path="login" element={<UserLogin />} />
+      </Route>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
 }
 export default App;

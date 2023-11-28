@@ -2,11 +2,11 @@ import { createContext, useEffect, useReducer, useState } from 'react';
 import { ACTIONS } from './reducerActions';
 import { reducer } from './reducer';
 
-export const GlobalContext = createContext();
+export const AnimeContext = createContext();
 
 const baseUrl = 'https://api.jikan.moe/v4';
 
-export const GlobalContextProvider = ({ children }) => {
+export const AnimeContextProvider = ({ children }) => {
   // intial state
   const intialState = {
     popularAnime: [],
@@ -22,7 +22,7 @@ export const GlobalContextProvider = ({ children }) => {
   const getPopularAnime = async () => {
     try {
       dispatch({ type: ACTIONS.LOADING });
-      const response = await fetch(`${baseUrl}/top/anime?filter=bypopularity`);
+      const response = await fetch(`${baseUrl}/top/anime?filter=bypopularity&limit=10`);
       const data = await response.json();
       dispatch({ type: ACTIONS.GET_POPULAR_ANIME, payload: data.data });
     } catch (error) {
@@ -59,7 +59,7 @@ export const GlobalContextProvider = ({ children }) => {
   const searchAnime = async (anime) => {
     try {
       dispatch({ type: ACTIONS.LOADING });
-      const response = await fetch(`${baseUrl}/anime?q=${anime}&order_by=popularity&sort=asc&sfw`);
+      const response = await fetch(`${baseUrl}/anime?q=${anime}&order_by=popularity&sort=asc&sfw&limit=10`);
       const data = await response.json();
       dispatch({ type: ACTIONS.SEARCH, payload: data.data });
     } catch (error) {
@@ -68,8 +68,8 @@ export const GlobalContextProvider = ({ children }) => {
   };
 
   return (
-    <GlobalContext.Provider value={{ ...state, handleChange, handleSubmit, searchAnime, search }}>
+    <AnimeContext.Provider value={{ ...state, handleChange, handleSubmit, searchAnime, search }}>
       {children}
-    </GlobalContext.Provider>
+    </AnimeContext.Provider>
   );
 };

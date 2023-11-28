@@ -1,7 +1,7 @@
 import './styles/navbar.css';
-import { useGlobalContext } from '../hooks/useGlobalContext';
+import { useAnimeContext } from '../hooks/useAnimeContext';
 const NavBar = () => {
-  const { handleSubmit, search, handleChange } = useGlobalContext();
+  const { handleSubmit, search, handleChange } = useAnimeContext();
   return (
     <div className="header">
       <h1>My Anime Info</h1>

@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { RegisterForm, LoginForm } from '../data';
+import { useAuthContext } from '../hooks/useAuthContext';
 const UserLogin = () => {
   const [currentForm, setCurrentForm] = useState('login');
+  const { user } = useAuthContext();
 
   const toggleForm = (formName) => {
     setCurrentForm(formName);
@@ -9,7 +11,11 @@ const UserLogin = () => {
 
   return (
     <div>
-      {currentForm === 'login' ? <LoginForm onFormSwitch={toggleForm} /> : <RegisterForm onFormSwitch={toggleForm} />}
+      {currentForm === 'login' || user ? (
+        <LoginForm onFormSwitch={toggleForm} />
+      ) : (
+        <RegisterForm onFormSwitch={toggleForm} />
+      )}
     </div>
   );
 };

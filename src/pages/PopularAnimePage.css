@@ -1,8 +1,4 @@
-.popular-container {
-  display: flex;
-}
 .popular-anime {
-  margin: 2rem 0;
   padding: 2rem;
   width: 100%;
   display: grid;
@@ -13,10 +9,24 @@
 .popular-anime a {
   height: 500px;
   border-radius: 7px;
-  border: 8px solid var(--primeryText);
 }
 .popular-anime a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: 8px solid var(--primeryText);
+}
+.container {
+  background-color: var(--primeryColor);
+  height: 80vh, fit-content;
+}
+
+.container > h2 {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.anime-card {
+  margin-bottom: 20px;
 }

@@ -1,15 +1,15 @@
-import { useRegisterForm } from '../../hooks/useRegisterForm';
-import { Input } from '../../data/index';
+import { Input } from '../../data';
 import './form.css';
+import { useAuthContext } from '../../hooks/useAuthContext';
 
 const RegisterForm = ({ onFormSwitch }) => {
-  const { fields, handleChange, handleSubmit } = useRegisterForm();
+  const { fields, handleChange, handleRegisterSubmit } = useAuthContext();
 
   return (
     <div className="flex-container">
       <div className="form-container">
         <h2>Register:</h2>
-        <form onSubmit={handleSubmit} className="register-form">
+        <form onSubmit={handleRegisterSubmit} className="register-form">
           {fields.map((field) => (
             <Input key={field.id} {...field} handleChange={handleChange} />
           ))}
