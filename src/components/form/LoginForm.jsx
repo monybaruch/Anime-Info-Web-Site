@@ -18,7 +18,7 @@ const LoginForm = ({ onFormSwitch }) => {
           </button>
         </form>
         <button onClick={() => onFormSwitch('register')} className="link-btn">
-          Don't have an account? Register here.
+          Do not have an account? Register here.
         </button>
       </div>
     </div>
