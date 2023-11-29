@@ -2,12 +2,13 @@
   padding: 2rem;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-gap: 3rem;
+  padding-bottom: 7rem;
 }
 
 .popular-anime a {
-  height: 500px;
+  height: 450px;
   border-radius: 7px;
 }
 .popular-anime a img {
@@ -21,23 +22,29 @@
   height: 80vh, fit-content;
 }
 
-.container > h2 {
+.container h2 {
   padding-top: 10px;
   text-align: center;
   font-size: 3rem;
 }
 
 .anime-card {
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
+.buttons-container {
+  margin-bottom: 20px;
+}
+.clear-btn {
+  margin-left: 20px;
+}
 @media screen and (max-width: 600px) {
   .popular-anime {
     padding: 2rem;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 0.5rem;
   }
 
   .popular-anime a {
@@ -52,11 +59,19 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 0.5rem;
+    grid-gap: 2rem;
+    padding-bottom: 10rem;
   }
 
   .popular-anime a {
     height: 300px;
     border-radius: 7px;
+  }
+
+  .popular-anime a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 8px solid var(--primeryText);
   }
 }

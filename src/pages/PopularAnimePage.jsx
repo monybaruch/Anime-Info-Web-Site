@@ -74,9 +74,13 @@ function PopularAnimePage() {
             {user && (
               <div className="buttons-container">
                 {user.favorites.some((favAnime) => favAnime.mal_id === anime.mal_id) ? (
-                  <button onClick={() => removeFromFavorites(anime.mal_id)}>Remove</button>
+                  <button onClick={() => removeFromFavorites(anime.mal_id)} className="btn">
+                    Remove
+                  </button>
                 ) : (
-                  <button onClick={() => addToFavorites(anime)}>Add</button>
+                  <button onClick={() => addToFavorites(anime)} className="btn">
+                    Add
+                  </button>
                 )}
               </div>
             )}
@@ -87,18 +91,20 @@ function PopularAnimePage() {
         <div>
           <h2>Your Favorites:</h2>
           <div className="clear-all-container">
-            <button onClick={clearFavorites} className="btn">
+            <button onClick={clearFavorites} className="btn clear-btn">
               Clear All
             </button>
           </div>
           <div className="popular-anime">
             {user &&
               user.favorites.map((favAnime) => (
-                <div key={favAnime.mal_id}>
+                <div key={favAnime.mal_id} className="anime-card">
                   <Link to={`/anime/${favAnime.mal_id}`}>
                     <img src={favAnime.images.jpg.large_image_url} alt={favAnime.title} />
                   </Link>
-                  <button onClick={() => removeFromFavorites(favAnime.mal_id)}>Remove</button>
+                  <button onClick={() => removeFromFavorites(favAnime.mal_id)} className="btn">
+                    Remove
+                  </button>
                 </div>
               ))}
           </div>

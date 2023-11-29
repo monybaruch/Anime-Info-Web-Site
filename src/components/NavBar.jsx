@@ -13,7 +13,9 @@ const NavBar = () => {
       return (
         <>
           <NavLink to="/">Home</NavLink>
-          <button onClick={logout}>Logout</button>
+          <NavLink to="/" onClick={logout}>
+            Logout
+          </NavLink>
         </>
       );
     } else {
