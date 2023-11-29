@@ -75,20 +75,7 @@ iframe {
   .footer {
     font-size: 0.7rem;
   }
-  .header {
-    display: flex;
-    font-size: 1rem;
-    flex-direction: column;
-    height: 150px;
-    align-items: center;
-  }
 
-  .header .anime-search input {
-    width: 100px;
-    height: 30px;
-    font-size: 1.3rem;
-    padding: 0 1rem;
-  }
   .btn {
     background-color: var(--primeryText);
     border: 3px solid var(--primeryColor);
@@ -97,7 +84,6 @@ iframe {
     color: var(--primeryColor);
     font-weight: 600;
     border-radius: 7px;
-    padding: 0.4rem;
     margin: none;
   }
 }
@@ -109,18 +95,5 @@ iframe {
   }
   .footer {
     font-size: 0.9rem;
-  }
-  .header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.5rem;
-  }
-
-  .header .anime-search input {
-    width: 200px;
-    height: 45px;
-    font-size: 1.3rem;
-    padding: 0 1rem;
   }
 }

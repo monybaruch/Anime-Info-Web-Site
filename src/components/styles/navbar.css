@@ -3,17 +3,121 @@
   height: 10vh;
   background-color: #444341;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: var(--primeryText);
-  font-size: 2rem;
+  padding: 0 20px;
 }
 
-.header .anime-search input {
-  outline: none;
-  border: none;
-  width: 200px;
+.logo-header {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.search-form .input-control {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form .input-control {
   height: 45px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+}
+
+.search-btn {
+  background-color: var(--primeryText);
+  border: 3px solid var(--primeryColor);
+  outline: none;
+  font-size: 1.5rem;
+  color: var(--primeryColor);
+  font-weight: 600;
+  border-radius: 7px;
+  height: 45px;
   padding: 0 1rem;
+}
+
+.search-btn:hover {
+  border: 3px solid var(--primeryText);
+  color: var(--primeryText);
+  background-color: var(--primeryColor);
+  transition: 0.5s;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--primeryColor);
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-links a:hover {
+  color: var(--primeryText);
+}
+
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15vh;
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
+  .header .input-control {
+    flex-direction: row;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35vh;
+    padding: 20px;
+  }
+  .header h1 {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    padding: none;
+  }
+
+  .search-form .input-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .search-form .input-control {
+    width: 300px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .search-btn {
+    font-size: 1.5rem;
+    height: 45px;
+    height: 45px;
+    padding: 0 1rem;
+  }
 }
