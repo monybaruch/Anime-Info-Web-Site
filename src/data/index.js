@@ -8,7 +8,7 @@ import AnimeInfo from './../components/AnimeInfo';
 import RegisterForm from '../components/form/RegisterForm';
 import NotFound from '../components/NotFound';
 import LoginForm from '../components/form/LoginForm';
-import Input from '../components/form/input';
+import Input from '../components/form/Input';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import UserLogin from '../pages/UserLogin';
